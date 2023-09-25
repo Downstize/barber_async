@@ -3,10 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BarberShop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Barber Shop Simulation" Height="450" Width="800">
 
+    <Grid x:Name="MainGrid">
+        <!-- Log ListBox -->
+        <ListBox x:Name="LogListBox" Grid.Column="0" Grid.ColumnSpan="6" Margin="5" VerticalAlignment="Bottom" Height="150" />
+        
+        <!-- Barber Rectangle -->
+        <Rectangle x:Name="BarberRect" Width="50" Height="50" Fill="Blue" Margin="50,50,0,0"/>
+        
+        <!-- Client Rectangles -->
+        <Rectangle x:Name="Client1Rect" Width="50" Height="50" Fill="Green" Margin="150,50,0,0"/>
+        <Rectangle x:Name="Client2Rect" Width="50" Height="50" Fill="Green" Margin="250,50,0,0"/>
+        <Rectangle x:Name="Client3Rect" Width="50" Height="50" Fill="Green" Margin="350,50,0,0"/>
+        <Rectangle x:Name="Client4Rect" Width="50" Height="50" Fill="Green" Margin="450,50,0,0"/>
+        <Rectangle x:Name="Client5Rect" Width="50" Height="50" Fill="Green" Margin="550,50,0,0"/>
     </Grid>
+
 </Window>
