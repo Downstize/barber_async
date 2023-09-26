@@ -5,20 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Barber Shop Simulation" Height="450" Width="800">
+    
 
     <Grid x:Name="MainGrid">
+        
+        <Path x:Name="ClientPath" Stroke="Black" StrokeThickness="2" Opacity="0" />
+
         <!-- Log ListBox -->
         <ListBox x:Name="LogListBox" Grid.Column="0" Grid.ColumnSpan="6" Margin="5" VerticalAlignment="Bottom" Height="150" />
-        
+
         <!-- Barber Rectangle -->
-        <Rectangle x:Name="BarberRect" Width="50" Height="50" Fill="Blue" Margin="50,50,0,0"/>
+        <Rectangle x:Name="BarberRect" Width="50" Height="50" Fill="Blue" Margin="30,50,0,0" HorizontalAlignment="Left"/>
         
         <!-- Client Rectangles -->
-        <Rectangle x:Name="Client1Rect" Width="50" Height="50" Fill="Green" Margin="150,50,0,0"/>
-        <Rectangle x:Name="Client2Rect" Width="50" Height="50" Fill="Green" Margin="250,50,0,0"/>
-        <Rectangle x:Name="Client3Rect" Width="50" Height="50" Fill="Green" Margin="350,50,0,0"/>
-        <Rectangle x:Name="Client4Rect" Width="50" Height="50" Fill="Green" Margin="450,50,0,0"/>
-        <Rectangle x:Name="Client5Rect" Width="50" Height="50" Fill="Green" Margin="550,50,0,0"/>
+        <Rectangle x:Name="Client1Rect" Width="50" Height="50" Fill="Green" Margin="175,50,0,0" HorizontalAlignment="Left">
+            <Rectangle.ToolTip>
+                <ToolTip Content="{Binding ElementName=Client1Rect, Path=Tag}"/>
+            </Rectangle.ToolTip>
+        </Rectangle>
+        <Rectangle x:Name="Client2Rect" Width="50" Height="50" Fill="Green" Margin="275,50,0,0" HorizontalAlignment="Left">
+            <Rectangle.ToolTip>
+                <ToolTip Content="{Binding ElementName=Client2Rect, Path=Tag}"/>
+            </Rectangle.ToolTip>
+        </Rectangle>
+        <Rectangle x:Name="Client3Rect" Width="50" Height="50" Fill="Green" Margin="375,50,0,0" HorizontalAlignment="Left">
+            <Rectangle.ToolTip>
+                <ToolTip Content="{Binding ElementName=Client3Rect, Path=Tag}"/>
+            </Rectangle.ToolTip>
+        </Rectangle>
+        <Rectangle x:Name="Client4Rect" Width="50" Height="50" Fill="Green" Margin="475,50,0,0" HorizontalAlignment="Left">
+            <Rectangle.ToolTip>
+                <ToolTip Content="{Binding ElementName=Client4Rect, Path=Tag}"/>
+            </Rectangle.ToolTip>
+        </Rectangle>
+        
+        <Rectangle x:Name="Client5Rect" Width="50" Height="50" Fill="Green" Margin="575,50,0,0" HorizontalAlignment="Left">
+            <Rectangle.ToolTip>
+                <ToolTip Content="{Binding ElementName=Client5Rect, Path=Tag}"/>
+            </Rectangle.ToolTip>
+        </Rectangle>
+        <Rectangle x:Name="Visitor" Width="50" Height="50" Fill="Yellow" Margin="725,50,0,0" HorizontalAlignment="Left"/>
     </Grid>
-
+    
 </Window>

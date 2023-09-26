@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Collections.Generic;
@@ -11,7 +12,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
-using Async_lab1;
 
 namespace BarberShop
 {
@@ -55,7 +55,7 @@ namespace BarberShop
                 int randomIndex = new Random().Next(waitingList.Count);
                 waitingList.RemoveAt(randomIndex);
             }
-            randomTimer.Change(new Random().Next(1000, 3000), Timeout.Infinite);
+            randomTimer.Change(new Random().Next(6000, 15000), Timeout.Infinite);
             UpdateUI("Клиент ушел из барбершопа по причине срочно появившегося дела");
         }
         
